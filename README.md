@@ -1,4 +1,4 @@
-# Test Helper
+# Mintest
 
 This project is inspired by Ruby minispec, and same as the Python minitest.
 
