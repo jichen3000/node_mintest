@@ -1,0 +1,21 @@
+{
+  "name": "mintest",
+  "version": "0.0.1",
+  "description": "This project is inspired by Ruby minispec, and same as the Python minitest.",
+  "main": "lib/mintest.js",
+  "scripts": {
+    "test": "node test/test_mintest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/jichen3000/node_mintest.git"
+  },
+  "keywords": [
+    "test",
+    "unittest",
+    "mini",
+    "min"
+  ],
+  "author": "Colin Ji <jichen3000@gmail.com>",
+  "license": "MIT"
+}

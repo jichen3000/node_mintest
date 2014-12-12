@@ -1,0 +1,3 @@
+ ☐ add must_equal
+ ☐ design should or others, as testcase. Use 'it' as testcase function.
+ ☐ design how to run only this testcase. rules: 1. easy to use. means user can easily set it or unset it. how about it can be comment 2. thinking in js.
