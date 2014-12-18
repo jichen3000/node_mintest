@@ -2,11 +2,11 @@
  ☐ support key_func in must_equal
  ☐ refactor followed https://github.com/iambumblehead/compareobj/blob/master/compareobj.js
  ☐ add mustTrue, mustFalse
- ☐ add mustThrow
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ add mustThrow @done (14-12-18 15:36)
  ✔ design how to run only this testcase. rules: 1. easy to use. means user can easily set it or unset it. how about it can be comment 2. thinking in js. @done (14-12-18 10:02)
  ✔ support only this option. @done (14-12-18 10:01)
  ✔ support capture error in must_euqal @done (14-12-16 06:16)

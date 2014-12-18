@@ -1,4 +1,8 @@
-### 1.1.0 (2014-12-17)
+### 1.2.0 (2014-12-18)
+
+- Support mustThrow.
+
+### 1.1.0 (2014-12-18)
 
 - Support 'only this' option.
 

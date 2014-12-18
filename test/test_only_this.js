@@ -18,6 +18,7 @@ if (require.main === module) {
     x(1).mustEqual(1);
     '4'.mustEqual('4');
   });
+  // it.option("only this");
   it("something4", function () { 
     ({a: 1, c: NaN, b: null}).mustEqual({a:1, b:null, c:NaN});
     ({a: 1, c: NaN, b: null}).mustEqual({a:1, b:null, c:123});

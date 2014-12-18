@@ -2,7 +2,9 @@
 
 This project is inspired by Ruby minispec, and same as the Python minitest.
 
-I am actively developing it, now it only support one method mustEqual.
+It offers some useful methods:
+
+    mustEqual, mustThrow, option.
 
 github: [https://github.com/jichen3000/node_mintest](https://github.com/jichen3000/node_mintest)
 
@@ -47,28 +49,37 @@ In your code, you can write as the below:
         '4'.mustEqual('4');
       });
     }
+    it("must throw", function () {
+      (function () {aa.bb()}).mustThrow("ReferenceError");
+      (function () {aa.bb()}).mustThrow("ReferenceError", "aa is not defined");
+      (function () {aa.bb()}).mustThrow("ReferenceError", "some error");
+      (function () {aa.bb()}).mustThrow("TypeError");
+      (function () {aa.bb()}).mustThrow("TypeError", "some error");
+    })
 
 print result:
 
     Running tests:
 
-    .E.F
+    .E.FF
 
-    Finished tests in 0.004s.
+    Finished tests in 0.007s.
 
+    Error list:
       1) Error: 123
-        at it.a (/Users/colin/work/node_mintest/test/test_mintest.js:10:11)
+        at it.a (/Users/colin/work/node_mintest/lib/mintest.js:229:11)
         at self.TestFunction.run (/Users/colin/work/node_mintest/lib/test_function.js:14:30)
-        at process.onExit (/Users/colin/work/node_mintest/lib/mintest.js:79:23)
+        at process.onExit (/Users/colin/work/node_mintest/lib/mintest.js:119:23)
         at process.emit (events.js:95:17)
 
+    Failure list:
       1) Failure:
-    File "/Users/colin/work/node_mintest/test/test_mintest.js", line 9, in it.a
+    File "/Users/colin/work/node_mintest/lib/mintest.js", line 228, in it.a
     Expected: 2
       Actual: 1
 
       2) Failure:
-    File "/Users/colin/work/node_mintest/test/test_mintest.js", line 19, in <anonymous>
+    File "/Users/colin/work/node_mintest/lib/mintest.js", line 239, in <anonymous>
     Expected: {
       "a": 1,
       "b": null,
@@ -80,7 +91,35 @@ print result:
       "b": null
     }
 
-    4 tests, 7 assertions, 2 failures, 1 errors.
+      3) Failure:
+    File "/Users/colin/work/node_mintest/lib/mintest.js", line 246, in <anonymous>
+    Expected: {
+      "error name": "ReferenceError",
+      "error message": "some error"
+    }
+      Actual: {
+      "error name": "ReferenceError",
+      "error message": "aa is not defined"
+    }
+
+      4) Failure:
+    File "/Users/colin/work/node_mintest/lib/mintest.js", line 247, in <anonymous>
+    Expected: "TypeError"
+      Actual: "ReferenceError"
+
+      5) Failure:
+    File "/Users/colin/work/node_mintest/lib/mintest.js", line 248, in <anonymous>
+    Expected: {
+      "error name": "TypeError",
+      "error message": "some error"
+    }
+      Actual: {
+      "error name": "ReferenceError",
+      "error message": "aa is not defined"
+    }
+
+    5 tests, 12 assertions, 5 failures, 1 errors.
+
 
 And now, it support 'only this' option, it can run only one test function which is nearest to the option. Example:
 
