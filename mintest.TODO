@@ -1,3 +1,9 @@
- ☐ add must_equal
- ☐ design should or others, as testcase. Use 'it' as testcase function.
+ ✔ add must_equal @done (14-12-15 17:43)
+ ✔ design should or others, as testcase. Use 'it' as testcase function. @done (14-12-15 17:43)
  ☐ design how to run only this testcase. rules: 1. easy to use. means user can easily set it or unset it. how about it can be comment 2. thinking in js.
+ ☐ support different report format. priority, very low.
+ ✔ support capture error in must_euqal @done (14-12-16 06:16)
+ ☐ support key_func in must_equal
+ ☐ refactor followed https://github.com/iambumblehead/compareobj/blob/master/compareobj.js
+ ☐ add mustTrue, mustFalse
+ ☐ add mustThrow

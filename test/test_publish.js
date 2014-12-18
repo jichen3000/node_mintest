@@ -1,19 +1,23 @@
-
-function do_something (argument) {
-  // body...
-}
+var it=require('mintest');
 
 if (require.main === module) {
-  var it = require('node-mini-test');
-  it("should support something",function () {
-    // body...
-    // do some test
-  });
+  require("testhelper");
 
-  it.option('only this','sync');
-  it(do_something,function () {
-    // body...
-    // do some test
-    do_something(123).must_equal(456);
+  it.option("only this");
+  it("something", function () { });
+  it("something2", function () { 
+    (1).mustEqual(2);
+    throw new Error("123");
+    '5'.mustEqual('5');
+  });
+  it("something3", function () { 
+    (1).mustEqual(1);
+    '4'.mustEqual('4');
+  });
+  it("something4", function () { 
+    ({a: 1, c: NaN, b: null}).mustEqual({a:1, b:null, c:NaN});
+    ({a: 1, c: NaN, b: null}).mustEqual({a:1, b:null, c:123});
+    ({a: 1}).mustEqual({a:1});
+    '4'.mustEqual('4');
   });
 }

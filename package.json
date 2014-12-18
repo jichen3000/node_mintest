@@ -1,6 +1,6 @@
 {
   "name": "mintest",
-  "version": "0.0.2",
+  "version": "1.0.1",
   "description": "This project is inspired by Ruby minispec, and same as the Python minitest.",
   "main": "lib/mintest.js",
   "scripts": {
