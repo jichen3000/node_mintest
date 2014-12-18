@@ -13,6 +13,7 @@ if (require.main === module) {
     throw new Error("123");
     x('5').mustEqual('5');
   });
+  it.option("only this");
   it("something3", function () { 
     x(1).mustEqual(1);
     '4'.mustEqual('4');

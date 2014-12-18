@@ -1,3 +1,7 @@
+### 1.1.0 (2014-12-17)
+
+- Support 'only this' option.
+
 ### 1.0.1 (2014-12-17)
 
 - Fix a typo in README.md.

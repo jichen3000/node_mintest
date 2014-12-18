@@ -29,7 +29,6 @@ In your code, you can write as the below:
     }
 
     if (require.main === module) {
-      require("testhelper");
 
       it("something", function () { });
       it("something2", function () { 
@@ -82,3 +81,40 @@ print result:
     }
 
     4 tests, 7 assertions, 2 failures, 1 errors.
+
+And now, it support 'only this' option, it can run only one test function which is nearest to the option. Example:
+
+    var it=require('mintest');
+
+    // the function you want to test
+    function x(arg) {
+        return arg;
+    }
+
+    if (require.main === module) {
+
+      it("something2", function () { 
+        x(1).mustEqual(2);
+        throw new Error("123");
+        x('5').mustEqual('5');
+      });
+      it.option("only this");
+      it("something3", function () { 
+        x(1).mustEqual(1);
+        '4'.mustEqual('4');
+      });
+    }
+
+
+print result:
+
+    Running tests:
+
+    .
+
+    Finished tests in 0.004s.
+
+    1 tests, 2 assertions, 0 failures, 0 errors.
+    
+    Since 'only this' has been set, only one test function has been run.
+    [Finished in 0.1s]
