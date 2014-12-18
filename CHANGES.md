@@ -1,3 +1,7 @@
+### 1.2.1 (2014-12-18)
+
+- Fix a typo in README.md.
+
 ### 1.2.0 (2014-12-18)
 
 - Support mustThrow.

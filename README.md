@@ -1,6 +1,6 @@
 # Mintest
 
-This project is inspired by Ruby minispec, and same as the Python minitest.
+This project is inspired by Ruby's minispec and Python's minitest.
 
 It offers some useful methods:
 
