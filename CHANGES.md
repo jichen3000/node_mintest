@@ -1,3 +1,7 @@
+### 1.3.0 (2014-12-19)
+
+- Support custom compare function in mustEqual.
+
 ### 1.2.1 (2014-12-18)
 
 - Fix a typo in README.md.
